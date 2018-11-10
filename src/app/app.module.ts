@@ -10,15 +10,19 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+
 
 //Yours
 import { AppComponent } from './app.component';
 import { BookReviewFormComponent } from './components/book-review-form/book-review-form.component';
+import { BookListComponent } from './components/book-list/book-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookReviewFormComponent
+    BookReviewFormComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,8 @@ import { BookReviewFormComponent } from './components/book-review-form/book-revi
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

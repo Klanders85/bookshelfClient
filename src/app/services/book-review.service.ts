@@ -7,11 +7,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BookReviewService {
-  baseUrl: string = "http://localhost:8080/api";
-  postUrl: string = this.baseUrl + "/books";
+  baseUrl: string = "http://localhost:8080/api/books/";
   constructor(private _http: HttpClient) { }
 
   addReview(formData): any {
-    return this._http.post(this.postUrl, formData);
+    return this._http.post(this.baseUrl, formData);
+  }
+
+  getBooks() {
+    return this._http.get(this.baseUrl);
   }
 }
