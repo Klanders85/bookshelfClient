@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 //3rd party
 import { MatCardModule } from '@angular/material/card';
@@ -22,6 +23,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
