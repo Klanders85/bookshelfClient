@@ -13,10 +13,12 @@ import { MatButtonModule } from '@angular/material/button';
 
 //Yours
 import { AppComponent } from './app.component';
+import { BookReviewFormComponent } from './components/book-review-form/book-review-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BookReviewFormComponent
   ],
   imports: [
     BrowserModule,

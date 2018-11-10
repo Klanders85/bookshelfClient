@@ -1,33 +1,4 @@
 <mat-card>
   <mat-card-title>{{ title }}</mat-card-title>
 </mat-card>
-
-<mat-card>
-  <mat-card-title>Add A Book Review!</mat-card-title>
-
-  <form [formGroup]="newBookReviewForm" (ngSubmit)="onSubmit(newBookReviewForm.value)">
-    <mat-form-field>
-      <input matInput placeholder="Book title" formControlName="title">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Author" formControlName="author">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Cover image" formControlName="picture" placeholder="paste img url">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Book description" formControlName="description">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Published date" formControlName="publishedDate">
-    </mat-form-field>
-
-    <mat-form-field>
-      <textarea matInput placeholder="Book review" formControlName="review"></textarea>
-    </mat-form-field>
-
-    <pre>{{newBookReviewForm.value | json}}</pre>
-    <button type="submit" mat-raised-button color="primary">Submit book review</button>
-  </form>
-
-</mat-card>
+<book-review-form></book-review-form>
