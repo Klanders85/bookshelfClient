@@ -9,4 +9,10 @@ mat-card {
     margin-top: 20px;
     margin-right: 10px;
     margin-left: 10px;
+
+    .buttonWrapper_Flex {
+        display: flex;
+        justify-content: space-around;
+    }
+
 }

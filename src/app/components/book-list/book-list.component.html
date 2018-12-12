@@ -4,5 +4,9 @@
   <p><i>{{book.description}}</i></p>
   <p>{{book.publishedDate}}</p>
   <p>{{book.review}}</p>
-  <button (click)="deleteBook(book._id)">Delete Book</button>
+  <div class="buttonWrapper_Flex">
+    <button mat-fab color="primary">More</button>
+    <button mat-fab color="accent">Edit</button>
+    <button mat-fab color="warn" (click)="deleteBook(book._id)">Delete</button>
+  </div>
 </mat-card>
