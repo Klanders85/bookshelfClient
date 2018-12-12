@@ -13,11 +13,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+
 
 //Yours
 import { AppComponent } from './app.component';
 import { BookReviewFormComponent } from './components/book-review-form/book-review-form.component';
 import { BookListComponent } from './components/book-list/book-list.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 const appRoutes: Routes = [
   { path: 'add-book-review', component: BookReviewFormComponent },
@@ -29,7 +33,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     BookReviewFormComponent,
-    BookListComponent
+    BookListComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatButtonModule,
     MatListModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
