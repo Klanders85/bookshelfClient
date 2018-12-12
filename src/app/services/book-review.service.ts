@@ -17,4 +17,8 @@ export class BookReviewService {
   getBooks() {
     return this._http.get(this.baseUrl);
   }
+
+  deleteBook(id: string) {
+    return this._http.delete(this.baseUrl + id)
+  }
 }

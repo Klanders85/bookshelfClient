@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
+
 import { BookReviewService } from '../../services/book-review.service';
+
 
 @Component({
   selector: 'book-review-form',
@@ -13,7 +16,8 @@ export class BookReviewFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private _bookReviewService: BookReviewService
+    private _bookReviewService: BookReviewService,
+    private snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -45,9 +49,10 @@ export class BookReviewFormComponent implements OnInit {
         },
         () => {
           console.log('complete');
-          this._bookReviewService.getBooks();
+          this.snackBar.open('Book review saved!', '', {
+            duration: 1000
+          })
         }
-
       )
     }
   }

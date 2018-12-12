@@ -3,5 +3,6 @@
   <h3>{{book.author}}</h3>
   <p><i>{{book.description}}</i></p>
   <p>{{book.publishedDate}}</p>
-  <p>>{{book.review}}</p>
+  <p>{{book.review}}</p>
+  <button (click)="deleteBook(book._id)">Delete Book</button>
 </mat-card>
