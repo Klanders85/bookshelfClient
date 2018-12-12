@@ -1,10 +1,7 @@
-<mat-card *ngFor="let book of listOfBooks?.data">
-  <mat-list>
-    <mat-list-item role="listitem">{{book.title}}</mat-list-item>
-    <mat-list-item role="listitem">{{book.author}}</mat-list-item>
-    <mat-list-item role="listitem">{{book.picture}}</mat-list-item>
-    <mat-list-item role="listitem">{{book.description}}</mat-list-item>
-    <mat-list-item role="listitem">{{book.publishedDate}}</mat-list-item>
-    <mat-list-item role="listitem">{{book.review}}</mat-list-item>
-  </mat-list>
+<mat-card *ngFor="let book of listOfBooks?.data" id="bookListWrapper">
+  <h2>{{book.title}}</h2>
+  <h3>{{book.author}}</h3>
+  <p><i>{{book.description}}</i></p>
+  <p>{{book.publishedDate}}</p>
+  <p>>{{book.review}}</p>
 </mat-card>

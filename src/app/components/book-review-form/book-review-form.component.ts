@@ -20,11 +20,15 @@ export class BookReviewFormComponent implements OnInit {
     this.newBookReviewForm = this.formBuilder.group({
       title: ['', Validators.required],
       author: ['', Validators.required],
-      picture: ['', Validators.required],
+      picture: [''],
       description: ['', Validators.required],
       publishedDate: ['', Validators.required],
       review: ['', Validators.required]
     });
+  }
+
+  get f() {
+    return this.newBookReviewForm.controls;
   }
 
   onSubmit() {
@@ -38,6 +42,10 @@ export class BookReviewFormComponent implements OnInit {
         },
         (error) => {
           console.log(error);
+        },
+        () => {
+          console.log('complete');
+          this._bookReviewService.getBooks();
         }
 
       )

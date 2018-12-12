@@ -1,3 +1,11 @@
 mat-form-field {
     display: block;
 }
+
+.ng-touched, .ng-dirty{
+    color: red;
+}
+
+.ng-valid {
+    color: initial;
+}

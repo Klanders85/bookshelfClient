@@ -3,26 +3,45 @@
 
   <form [formGroup]="newBookReviewForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
-      <input matInput placeholder="Book title" formControlName="title">
+      <input matInput placeholder="Book title" formControlName="title" [ngClass]="{ 'is-invalid': f.title.errors }">
+      <p *ngIf="f.title.invalid && f.title.touched">
+        <strong>Please enter a book title.</strong>
+      </p>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Author" formControlName="author">
+      <input matInput placeholder="Author" formControlName="author" [ngClass]="{ 'is-invalid': f.author.errors }">
+      <p *ngIf="f.author.invalid && f.author.touched">
+        <strong>Please enter the author of the book.</strong>
+      </p>
     </mat-form-field>
+
     <mat-form-field>
       <input matInput placeholder="Cover image" formControlName="picture" placeholder="paste img url">
+      <p *ngIf="f.picture.touched">
+        <strong>While it&rsquo;s not required, we suggest adding a cover of the book. Who does&rsquo;nt like pictures?</strong>
+      </p>
     </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="Book description" formControlName="description">
+      <p *ngIf="f.description.invalid && f.description.touched">
+        <strong>Please add a book description, brevity is appreciated here.</strong>
+      </p>
     </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="Published date" formControlName="publishedDate">
+      <p *ngIf="f.publishedDate.invalid && f.publishedDate.touched">
+        <strong>Please enter the year the book was published.</strong>
+      </p>
     </mat-form-field>
 
     <mat-form-field>
       <textarea matInput placeholder="Book review" formControlName="review"></textarea>
+      <p *ngIf="f.review.invalid && f.review.touched">
+        <strong>Tell us what you think about the book. Afterall, that is what you are here for right?</strong>
+      </p>
     </mat-form-field>
 
-    <button type="submit" mat-raised-button color="primary">Submit book review</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!newBookReviewForm.valid">Submit book review</button>
   </form>
 
 </mat-card>
