@@ -48,6 +48,8 @@ export class BookReviewFormComponent implements OnInit {
           console.log(error);
         },
         () => {
+          this.newBookReviewForm.reset();
+          this.newBookReviewForm.markAsPristine();
           console.log('complete');
           this.snackBar.open('Book review saved!', '', {
             duration: 1000
